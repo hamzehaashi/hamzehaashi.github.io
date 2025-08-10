@@ -1,180 +1,190 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/headshot.jpg">
-    <title>Hamze Haashi — Portfolio</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- CSS Style Sheet -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hamze Haashi — Portfolio</title>
+  <meta name="description" content="Finance portfolio of Hamze Haashi: valuation, portfolio management, and Islamic finance.">
+  <link rel="stylesheet" href="styles.css" /> <link rel="icon" href="./assets/headshot.jpg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- HEADER -->
-    <header>
-        <a href="#" class="logo"> Portfo<span>lio</span></a>
-        <div class="bx bx-menu" id="menu-icon"></div>
 
-        <ul class="navbar">
-            <li><a href="#home"> Home </a></li>
-            <li><a href="#about"> About </a></li>
-            <li><a href="#skills"> Skills </a></li>
-            <li><a href="#experiences"> Experience </a></li>
-            <li><a href="#projects"> Projects </a></li>
-            <li><a href="#contact"> Contact </a></li>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <a class="brand" href="#home">Hamze Haashi</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="btn primary sm" href="/assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <button class="burger" aria-label="Menu">☰</button>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content container">
+      <div class="hero-text">
+        <p class="eyebrow">Hi, I’m</p>
+        <h1>Hamze Haashi</h1>
+        <p class="subtitle">Aspiring Portfolio / Investment Analyst</p>
+        <p class="tagline">
+          Focused on valuation (DCF, comps), portfolio construction, and
+          Shariah-compliant investing (AAOIFI).
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn" href="mailto:haashih@whitman.edu">Email Me</a>
+          <a class="btn" href="https://www.linkedin.com/in/hamzehaashi" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <img class="hero-photo" src="/assets/headshot.jpg" alt="Photo of Hamze Haashi">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section container">
+    <h2>About</h2>
+    <p>
+      B.A. Economics (Whitman College), minor in Finance. Former CFO of a
+      <strong>$1.88M</strong> student-run investment fund where I built DCFs, led rebalancing
+      education, and presented investment theses. I’m building a prototype backend
+      to assess <strong>AAOIFI</strong> halal compliance and generate risk insights.
+    </p>
+    <div class="quick-facts">
+      <div><span>Location</span> Seattle / SF / Chicago / Texas</div>
+      <div><span>Interests</span> Islamic finance, LBO/M&A, portfolio strategy</div>
+      <div><span>Tools</span> Excel, Sheets, PPT · learning Python/FastAPI, Finnhub API</div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section container">
+    <h2>Skills</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Valuation</h3>
+        <ul>
+          <li>DCF, comps, multiples</li>
+          <li>Sensitivity & scenarios</li>
+          <li>Board-style memo writing</li>
         </ul>
-    </header>
+      </div>
+      <div class="card">
+        <h3>Portfolio</h3>
+        <ul>
+          <li>Rebalancing frameworks</li>
+          <li>Cash creation / deployment</li>
+          <li>Risk notes & reporting</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Technical</h3>
+        <ul>
+          <li>Excel (advanced), Google Sheets</li>
+          <li>Learning Python + FastAPI</li>
+          <li>APIs: Finnhub (basics)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- HOME -->
-    <section class="home" id="home">
-        <div class="home-text">
-            <h5>Hello, I’m</h5>
-            <h1>Hamze Haashi</h1>
-            <h6>Finance Graduate <span>and Aspiring Portfolio Analyst</span></h6>
-            <p>I specialize in valuation (DCF, comps), portfolio construction, and Shariah-compliant investing. Former CFO of a $1.88M student-run fund at Whitman College.</p>
-            <a href="./assets/resume.pdf" target="_blank" download class="btn">📄 Download Resume</a>
-        </div>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section container">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="item">
+        <div class="when">Whitman Investment Company — CFO</div>
+        <div class="what">Managed $1.88M student fund</div>
+        <ul>
+          <li>Built 3-statement + DCFs; pitched theses to members & alumni</li>
+          <li>Led training on rebalancing and meeting cadence improvements</li>
+          <li>Produced slide decks and investment memos</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="when">Baker Boyer Bank — Cash Mgmt & Admin (Intern)</div>
+        <div class="what">Operations & client support</div>
+        <ul>
+          <li>Processed ACH, wires, remote deposits</li>
+          <li>Supported workflows and client communication</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="when">Education</div>
+        <div class="what">Whitman College — B.A. Economics, minor in Finance (2025)</div>
+        <ul>
+          <li>Corporate Finance, Investments, Econometrics, Accounting</li>
+          <li>CFA Level I planned</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        <div class="home-img">
-            <img src="./assets/headshot.jpg" alt="Hamze Haashi">
-        </div>
-    </section>
+  <!-- PROJECTS -->
+  <section id="projects" class="section container">
+    <h2>Projects</h2>
 
-    <!-- ABOUT -->
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="./assets/headshot.jpg" alt="Hamze Haashi">
-        </div>
+    <div class="project">
+      <div class="p-title">Target (TGT) — DCF & Sell Recommendation</div>
+      <p class="p-desc">
+        3-statement and DCF with WACC/COE, scenario & sensitivity analysis.
+        Board-style write-up with risks and catalysts.
+      </p>
+    </div>
 
-        <div class="about-text">
-            <h3>About Me</h3>
-            <h2>B.A. Economics, Minor in Finance — Whitman College</h2>
-            <p>
-                I have hands-on experience managing multi-million-dollar portfolios, performing deep equity research, and building detailed valuation models. My focus is on aligning investments with both performance goals and Islamic finance principles (AAOIFI standards).
-            </p>
-            <hr />
-            <p><b>Status:</b> Open to investment analyst, asset management, and portfolio management roles (January & June 2026 starts).</p>
-            <hr />
-            <div class="main-btn">
-                <a href="mailto:haashih@whitman.edu" class="btn">📧 Contact Me</a>
-            </div>
-        </div>
-    </section>
+    <div class="project">
+      <div class="p-title">Halal Investment Backend (FastAPI)</div>
+      <p class="p-desc">
+        Prototype API to score <strong>AAOIFI</strong> compliance + risk indicators and generate
+        plain-English summaries. Stack: FastAPI + OpenAI + Finnhub.
+      </p>
+    </div>
 
-    <!-- SKILLS -->
-    <section class="skills" id="skills">
-        <div class="center">
-            <h3>Skills</h3>
-            <p>Core finance and analytical capabilities.</p>
-        </div>
+    <div class="project">
+      <div class="p-title">Juba Farms Buyout (Camel Milk) — LBO Outline</div>
+      <p class="p-desc">
+        Founder outreach draft, buyout structure, unit economics & working-capital view.
+      </p>
+    </div>
 
-        <div class="service-content">
-            <div class="row">
-                <i class='bx bx-line-chart'></i>
-                <h3>Valuation</h3>
-                <p>DCF, comps, multiples, and sensitivity/scenario analysis.</p>
-            </div>
+  </section>
 
-            <div class="row">
-                <i class='bx bx-pie-chart'></i>
-                <h3>Portfolio Management</h3>
-                <p>Rebalancing frameworks, risk assessment, cash creation/deployment.</p>
-            </div>
+  <!-- CONTACT -->
+  <section id="contact" class="section container">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <a class="btn primary" href="mailto:haashih@whitman.edu">Email: haashih@whitman.edu</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/hamzehaashi">LinkedIn</a>
+      <a class="btn" target="_blank" rel="noopener" href="/assets/resume.pdf">Download Resume</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://github.com/hamzehaashi">GitHub</a>
+    </div>
+    <p class="fine">Last updated: <span id="updated"></span></p>
+  </section>
 
-            <div class="row">
-                <i class='bx bx-spreadsheet'></i>
-                <h3>Technical Tools</h3>
-                <p>Excel (Advanced), Google Sheets, PowerPoint; learning Python & FastAPI.</p>
-            </div>
+  <footer class="footer">
+    © <span id="year"></span> Hamze Haashi · All rights reserved
+  </footer>
 
-            <div class="row">
-                <i class='bx bx-certification'></i>
-                <h3>Islamic Finance</h3>
-                <p>AAOIFI Shariah screening (business activities & financial ratios).</p>
-            </div>
-        </div>
-    </section>
+  <script>
+    // mobile nav
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('header nav');
+    burger.addEventListener('click', () => nav.classList.toggle('open'));
 
-    <!-- EXPERIENCE -->
-    <section class="experiences" id="experiences">
-        <div class="experience-center">
-            <h3>Experience</h3>
-            <p>Highlights from my finance and banking journey.</p>
-        </div>
+    // dates
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('updated').textContent =
+      new Date().toLocaleDateString(undefined, { year:'numeric', month:'short', day:'2-digit' });
 
-        <div class="experience-content">
-            <div class="box">
-                <h4>2024–2025</h4>
-                <hr />
-                <h6>CFO — Whitman Investment Company</h6>
-                <p>Managed $1.88M student-run fund, led valuation projects, rebalancing, and investor communications.</p>
-            </div>
-
-            <div class="box">
-                <h4>Summer 2024</h4>
-                <hr />
-                <h6>Intern — Baker Boyer Bank</h6>
-                <p>Processed ACH, wires, remote deposits; supported internal operations and client communication.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="projects" id="projects">
-        <div class="projects-center">
-            <h2>Projects</h2>
-            <p>Key finance and investment projects I’ve led or built.</p>
-        </div>
-
-        <div class="projects-content">
-            <div class="portfolio-box">
-                <h2>Target (TGT) DCF Model</h2>
-                <p>Built 3-statement + DCF valuation with WACC/COE and scenarios; board-ready sell recommendation.</p>
-            </div>
-
-            <div class="portfolio-box">
-                <h2>Halal Investment Backend</h2>
-                <p>FastAPI-based API to score AAOIFI compliance and generate risk insights.</p>
-            </div>
-
-            <div class="portfolio-box">
-                <h2>Juba Farms Buyout Model</h2>
-                <p>LBO structure + unit economics for camel milk producer expansion.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-        <div class="contact-center">
-            <h2>Contact</h2>
-            <p>📌 Open to analyst roles in asset management, portfolio management, and investment research.</p>
-            <div class="contacts">
-                <p>📧 Email: <a href="mailto:haashih@whitman.edu">haashih@whitman.edu</a></p>
-                <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/hamzehaashi" target="_blank">linkedin.com/in/hamzehaashi</a></p>
-                <p>📄 Resume: <a href="./assets/resume.pdf" target="_blank">View PDF</a></p>
-                <p>💻 GitHub: <a href="https://github.com/hamzehaashi" target="_blank">github.com/hamzehaashi</a></p>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/hamzehaashi"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/hamzehaashi"><i class='bx bxl-github'></i></a>
-            </div>
-            <div class="copyright">
-                <p>© 2025 Hamze Haashi — All rights reserved</p>
-            </div>
-        </div>
-    </section>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script type="text/javascript" src="static.js"></script>
+    // smooth scroll (CSS handles most; this closes mobile menu on click)
+    document.querySelectorAll('header nav a').forEach(a=>{
+      a.addEventListener('click', ()=> nav.classList.remove('open'));
+    });
+  </script>
 </body>
 </html>
