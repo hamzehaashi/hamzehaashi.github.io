@@ -1,190 +1,311 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hamze Haashi — Portfolio</title>
-  <meta name="description" content="Finance portfolio of Hamze Haashi: valuation, portfolio management, and Islamic finance.">
-  <link rel="stylesheet" href="styles.css" /> <link rel="icon" href="./assets/headshot.jpg">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viwport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/title-pic.png">
+    <title class="fs-1"> Portfolio </title>
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Style Sheets -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!--- Header ---->
+    <header>
+        <a href="#" class="logo"> Portfo<span>lio</span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
 
-  <!-- NAVBAR -->
-  <header class="nav">
-    <a class="brand" href="#home">Hamze Haashi</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a class="btn primary sm" href="/assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
-    </nav>
-    <button class="burger" aria-label="Menu">☰</button>
-  </header>
+        <ul class="navbar">
+            <li><a href="#home"> Home </a></li>
+            <li><a href="#about"> About </a></li>
+            <li><a href="#skills"> Skills </a></li>
+            <li><a href="#experiences"> Experiences </a></li>
+            <li><a href="#projects"> Projects </a></li>
+            <li><a href="#contact"> Contact Me </a></li>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-content container">
-      <div class="hero-text">
-        <p class="eyebrow">Hi, I’m</p>
-        <h1>Hamze Haashi</h1>
-        <p class="subtitle">Aspiring Portfolio / Investment Analyst</p>
-        <p class="tagline">
-          Focused on valuation (DCF, comps), portfolio construction, and
-          Shariah-compliant investing (AAOIFI).
-        </p>
-        <div class="cta-row">
-          <a class="btn primary" href="#projects">See Projects</a>
-          <a class="btn" href="mailto:haashih@whitman.edu">Email Me</a>
-          <a class="btn" href="https://www.linkedin.com/in/hamzehaashi" target="_blank" rel="noopener">LinkedIn</a>
+        </ul>
+
+    </header>
+
+    <!--- Header ---->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h5> Hi there, I am </h5>
+            <h1> Mostaphe </h1>
+            <h6> a passionate technologist and a full-stack <span>developer.</span></h6>
+            <p> I am a software developer that designs and develops agile, user friendly websites and web applications! </p>
+            <a href="./Portfolio/Mostaphe's Resume." target="_blank" download class="btn" onclick=""> Download Resume </a>
         </div>
-      </div>
-      <img class="hero-photo" src="/assets/headshot.jpg" alt="Photo of Hamze Haashi">
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section container">
-    <h2>About</h2>
-    <p>
-      B.A. Economics (Whitman College), minor in Finance. Former CFO of a
-      <strong>$1.88M</strong> student-run investment fund where I built DCFs, led rebalancing
-      education, and presented investment theses. I’m building a prototype backend
-      to assess <strong>AAOIFI</strong> halal compliance and generate risk insights.
-    </p>
-    <div class="quick-facts">
-      <div><span>Location</span> Seattle / SF / Chicago / Texas</div>
-      <div><span>Interests</span> Islamic finance, LBO/M&A, portfolio strategy</div>
-      <div><span>Tools</span> Excel, Sheets, PPT · learning Python/FastAPI, Finnhub API</div>
-    </div>
-  </section>
+        <div class="home-img">
+            <img src="./images/Headshot-modified.png">
+        </div>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section container">
-    <h2>Skills</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Valuation</h3>
-        <ul>
-          <li>DCF, comps, multiples</li>
-          <li>Sensitivity & scenarios</li>
-          <li>Board-style memo writing</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Portfolio</h3>
-        <ul>
-          <li>Rebalancing frameworks</li>
-          <li>Cash creation / deployment</li>
-          <li>Risk notes & reporting</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Technical</h3>
-        <ul>
-          <li>Excel (advanced), Google Sheets</li>
-          <li>Learning Python + FastAPI</li>
-          <li>APIs: Finnhub (basics)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <!--- About ---->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./images/Headshot-modified.png">
+        </div>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section container">
-    <h2>Experience</h2>
-    <div class="timeline">
-      <div class="item">
-        <div class="when">Whitman Investment Company — CFO</div>
-        <div class="what">Managed $1.88M student fund</div>
-        <ul>
-          <li>Built 3-statement + DCFs; pitched theses to members & alumni</li>
-          <li>Led training on rebalancing and meeting cadence improvements</li>
-          <li>Produced slide decks and investment memos</li>
-        </ul>
-      </div>
-      <div class="item">
-        <div class="when">Baker Boyer Bank — Cash Mgmt & Admin (Intern)</div>
-        <div class="what">Operations & client support</div>
-        <ul>
-          <li>Processed ACH, wires, remote deposits</li>
-          <li>Supported workflows and client communication</li>
-        </ul>
-      </div>
-      <div class="item">
-        <div class="when">Education</div>
-        <div class="what">Whitman College — B.A. Economics, minor in Finance (2025)</div>
-        <ul>
-          <li>Corporate Finance, Investments, Econometrics, Accounting</li>
-          <li>CFA Level I planned</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+        <div class="about-text">
+            <h3> About Me </h2>
+            <h2> My name is Mostaphe Mohamud, and I am a Full-Stack Developer and a second year computer science student at Berea College.  </h5>
+            <p> I have a stong passion for creating things! I get energy by developing ideas and bringing them to life.
+                I am currently working as a Software Developer as part of Berea College's Student Programmers team. I work with a group of
+                talented software developers building a service learning web application for the CELTS department at Berea College.
+                The application that we have built is used by over <b>1000</b>  students, faculty and staff members everyday. </p>
+            <hr />
+            <p>
+                <b>Status: </b>Open to Software Engineering and Program Management Summer Internship Roles
+            </p>
+            <hr />
+            <div class="main-btn">
+                <a href="mailto:mostaphe.7@gmail.com" class="btn"> Conctact Me </a>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section container">
-    <h2>Projects</h2>
+            </div>
+        </div>
+        </section>
 
-    <div class="project">
-      <div class="p-title">Target (TGT) — DCF & Sell Recommendation</div>
-      <p class="p-desc">
-        3-statement and DCF with WACC/COE, scenario & sensitivity analysis.
-        Board-style write-up with risks and catalysts.
-      </p>
-    </div>
+        <!--- Skills ---->
+    <section class="skills" id="skills">
+        <div class="center">
+            <h3> Skills and Technologies </h3>
+            <p>I have worked with a myriad of technologies and frameworks for both front end and back end development.</p>
+        </div>
 
-    <div class="project">
-      <div class="p-title">Halal Investment Backend (FastAPI)</div>
-      <p class="p-desc">
-        Prototype API to score <strong>AAOIFI</strong> compliance + risk indicators and generate
-        plain-English summaries. Stack: FastAPI + OpenAI + Finnhub.
-      </p>
-    </div>
+        <div class="service-content">
+            <div class="row">
+                <i class='bx bxl-javascript'></i>
+                <h3> JavaScript </h3>
+                <p>I used JavaScript to build the front-end of the CELTS application I have worked on this summer!
+                </p>
+            </div>
 
-    <div class="project">
-      <div class="p-title">Juba Farms Buyout (Camel Milk) — LBO Outline</div>
-      <p class="p-desc">
-        Founder outreach draft, buyout structure, unit economics & working-capital view.
-      </p>
-    </div>
+            <div class="row">
+                <i class='bx bxl-python' ></i>
+                <h3> Python  </h3>
+                <p> Python is the language of my choosing and I use it for almost every project I build.
+                </p>
+            </div>
 
-  </section>
+            <div class="row">
+                <i class='bx bxl-bootstrap' ></i>
+                <h3> Bootstrap  </h3>
+                <p> Bootstrap is the essential for all my projects and I use it everyday to build exceptional pages.</p>
+            </div>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section container">
-    <h2>Contact</h2>
-    <div class="contact-grid">
-      <a class="btn primary" href="mailto:haashih@whitman.edu">Email: haashih@whitman.edu</a>
-      <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/hamzehaashi">LinkedIn</a>
-      <a class="btn" target="_blank" rel="noopener" href="/assets/resume.pdf">Download Resume</a>
-      <a class="btn" target="_blank" rel="noopener" href="https://github.com/hamzehaashi">GitHub</a>
-    </div>
-    <p class="fine">Last updated: <span id="updated"></span></p>
-  </section>
+            <div class="row">
+                <i class='bx bxl-css3' ></i>
+                <h3> CSS </h3>
+                <p> I use CSS for advanced and specific web designes and I am very proficient at it.</p>
+            </div>
 
-  <footer class="footer">
-    © <span id="year"></span> Hamze Haashi · All rights reserved
-  </footer>
+            <div class="row">
+                <i class='bx bxl-flask' ></i>
+                <h3> Flask </h3>
+                <p> I used this framework while buidling the CELTS application every day and it is very convinent. </p>
+            </div>
 
-  <script>
-    // mobile nav
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('header nav');
-    burger.addEventListener('click', () => nav.classList.toggle('open'));
+            <div class="row">
+                <i class='bx bx-cloud'></i>
+                <h3> MySQL </h3>
+                <p> I utilized MySQL as the database for CELTS to store data about the users and programs</p>
+            </div>
 
-    // dates
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('updated').textContent =
-      new Date().toLocaleDateString(undefined, { year:'numeric', month:'short', day:'2-digit' });
+            <div class="row">
+                <i class='bx bxl-git'></i>
+                <h3> Git </h3>
+                <p> I use git to help me push all the work I do on my mechine to push it to the cloud </p>
+            </div>
 
-    // smooth scroll (CSS handles most; this closes mobile menu on click)
-    document.querySelectorAll('header nav a').forEach(a=>{
-      a.addEventListener('click', ()=> nav.classList.remove('open'));
-    });
-  </script>
+            <div class="row">
+                <i class='bx bxl-github' ></i>
+                <h3> GitHub </h3>
+                <p> I use Github to store all my projects and it is also where we keep all our code for the Celts project</p>
+            </div>
+        </div>
+    </section>
+              <!-- Experiences -->
+    <section class="experiences" id="experiences">
+        <div class="experience-center">
+            <h3> Experience </h3>
+            <p> I have delved into the tech world from the very first day of my college career and I have acquired a ton of experiences ever since.</p>
+        </div>
+
+        <div class="experience-content">
+            <div class="box">
+                <h4> June-August 2022</h4>
+                <hr />
+                <table>
+                    <tr>
+                        <td>
+                            <h6> Software Developer</h6>
+                        </td>
+                        <td>
+                            <img class="experience-img" src="./images/Berea College Logo.png">
+                        </td>
+                    </tr>
+                </table>
+                <p>Develop and maintain a service-learning web apps that 1000+ students
+                    and faculty members use on a daily basis.</p>
+            </div>
+
+            <div class="box">
+                <h4> June-August 2022</h4>
+                <hr />
+                <table>
+                    <tr>
+                        <td>
+                            <h6> Pinterest Engage Scholar</h6>
+                        </td>
+                        <td>
+                            <img class="experience-img" src="./images/Pinterest-Logo-.png" style="margin-left: 0px;padding-top: 0px;">
+                        </td>
+                    </tr>
+                </table>
+                <p>Attended weekly career development sessions with Pinterest engineers to learn more about software engineering.</p>
+            </div>
+
+            <div class="box">
+                <h4> March-May 2022</h4>
+                <hr />
+                <table>
+                    <tr>
+                        <td>
+                            <h6> Tech Forward Fellow </h6>
+                        </td>
+                        <td>
+                            <img class="experience-img" src="./images/HBCU 20X20.png">
+                        </td>
+                    </tr>
+                </table>
+
+                <p> Developed technical skills in Software Engineering, UI/UX Design & Product Management as well as engaged in technical
+                     interview preparation sessions.</p>
+            </div>
+
+            <div class="box">
+                <h4> Jan-May 2022</h4>
+                <hr />
+                <table>
+                    <tr>
+                        <td>
+                            <h6> IT Support Specialist </h6>
+                        </td>
+                        <td>
+                            <img class="experience-img" src="./images/Berea College Logo.png">
+                        </td>
+                    </tr>
+                </table>
+                <p>I troubleshoot computer software and hardware issues for <b>1600+</b> college students and <b>130+</b>faculty/staff members.</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <div class="projects-center">
+            <h2> Projects</h2>
+            <p> I have worked on a couple of projects since the beginning of my college career </p>
+        </div>
+
+        <div class="projects-content">
+            <div class="portfolio-box">
+                <img src="./images/After.PNG" alt="https://github.com/BCStudentSoftwareDevTeam/celts" />
+
+                <div class="projects-overlay">
+                    <h2> CELTS </h2>
+                    <p class="project-description">
+                    CELTS is a service-learning web application designed
+                    to be used by a 1000+ Berea College’s faculty, staff, and students  </p>
+                    <a href="https://github.com/BCStudentSoftwareDevTeam/celts"><i class='bx bx-link-alt' ></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./images/bridge.png" alt="" />
+
+                <div class="projects-overlay">
+                    <h2> Bridge </h2>
+                    <p class="project-description">
+                        A web application designed for past interns to share
+                        their internship experience so that future interns can use it as a reference  </p>
+                    <a href="#"><i class='bx bx-link-alt' ></i></a>
+                    <p>
+                        Coming Soon
+                    </p>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./images/travel-guide.PNG" alt="" />
+
+                <div class="projects-overlay">
+                    <h2> Travel Guide </h2>
+                    <p class="project-description">
+                        A Python program that enables users to select a location on the world map and then suggests tourist attractions,
+                        local cuisines, and tips for travel to those specific locations</p>
+                    <a href="https://github.com/Berea-College-CSC-226/p01-mostaphe_daniel"><i class='bx bx-link-alt' ></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./images/Portfolio.PNG" alt="" />
+
+                <div class="projects-overlay">
+                    <h2> Portfolio </h2>
+                    <p class="project-description">
+                     A full-stack website designed to show case my technical skills and projects </p>
+                    <a href="file:///C:/Users/mohamudm/Desktop/My%20Portfolio/index.html?#home"><i class='bx bx-link-alt' ></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Contacts -->
+
+    <section class="contact" id="contact">
+        <div class="contact-center">
+            <h2> Contacts </h2>
+            <p> Hiring for Summer 2023 software engineer or program manager internships
+                and want to consider me for a position? Shoot me and email or a message on LinkedIn </p>
+        <div class="contacts">
+            <div class="container-left">
+                <p><i class='bx bx-location-plus'></i></i>101 Chestnut St, Berea, KY</p>
+                <p><i class='bx bxs-paper-plane'></i> mostaphe.7@gmail.com</p>
+                <p><i class='bx bx-phone'></i>614 592-6878</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/mostaphemohamud/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/mohamudm1"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p> Copyright © 2022. All rights Reserved. <br /> Created by Mostaphe Mohamud </p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--- Link to js---->
+    <script type="text/javascript" src="static.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>
+
 </html>
