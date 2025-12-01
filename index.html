@@ -1,238 +1,294 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="./assets/headshot.jpg">
-  <title class="fs-1">Hamze Haashi — Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Hamze Haashi | Finance Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B82F6',
+            secondary: '#10B981',
+            accent: '#F59E0B',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* ---------- SCROLL-ZOOM BACKGROUND ---------- */
+    .bg-wrap{
+      position:fixed;
+      top:0;left:0;width:100%;height:100%;
+      z-index:-2;
+      overflow:hidden;
+    }
+    .bg-wrap img{
+      position:absolute;
+      top:0;left:0;
+      width:100%;height:100%;
+      object-fit:cover;
+      transform-origin:center;
+      transition:transform .2s ease-out;
+    }
 
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    /* ---------- GLOBAL TEXT LIGHTNESS ---------- */
+    body{
+      background:transparent;
+      color:#e5e7eb; /* gray-200 */
+    }
+    h1,h2,h3,h4,h5,h6{color:#ffffff;text-shadow:0 2px 8px rgba(0,0,0,.5);}
+    p,span,li{color:#d1d5db;} /* gray-300 */
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    /* ---------- DYNAMIC SECTION SEPARATORS ---------- */
+    .section-divider{
+      position:relative;
+      height:1px;
+      margin:0 auto;
+      width:80%;
+      background:rgba(245,158,11,.25); /* accent-500 25% */
+      opacity:0;
+      transition:opacity .6s ease;
+    }
+    .section-divider.visible{opacity:1;}
 
-  <!-- CSS Style Sheets -->
-  <link rel="stylesheet" href="styles.css">
+    /* ---------- SOFTER GLASS CARDS ---------- */
+    .card-hover{
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(245,158,11,.15);
+      backdrop-filter:blur(6px);
+    }
+  </style>
 </head>
+<body class="bg-gradient-to-b from-white to-gray-50">
 
-<body>
-  <!--- Header ---->
-  <header>
-    <a href="#" class="logo"> Portfo<span>lio</span></a>
-    <div class="bx bx-menu" id="menu-icon"></div>
+  <!-- SCROLL-ZOOM BACKGROUND -->
+  <div class="bg-wrap">
+    <img id="zoom-bg" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80" alt>
+  </div>
 
-    <ul class="navbar">
-      <li><a href="#home"> Home </a></li>
-      <li><a href="#about"> About </a></li>
-      <li><a href="#skills"> Skills </a></li>
-      <li><a href="#experiences"> Experiences </a></li>
-      <li><a href="#projects"> Projects </a></li>
-      <li><a href="#contact"> Contact Me </a></li>
-    </ul>
-  </header>
+  <!-- NAVBAR (custom element) -->
+  <custom-navbar></custom-navbar>
 
-  <!--- Home ---->
-  <section class="home" id="home">
-    <div class="home-text">
-      <h5>Hi there, I am</h5>
-      <h1>Hamze Haashi</h1>
-      <h6>a Finance graduate and aspiring <span>Portfolio/Investment Analyst</span></h6>
-      <p>
-        I focus on valuation (DCF, comps), portfolio construction, and Shariah-compliant investing (AAOIFI).
-        Former CFO of a <b>$1.88M</b> student-run investment fund at Whitman College.
-      </p>
-      <a href="./assets/resume.pdf" target="_blank" download class="btn">📄 Download Resume</a>
-    </div>
-
-    <div class="home-img">
-      <img src="./assets/headshot.jpg" alt="Hamze Haashi">
-    </div>
-  </section>
-
-  <!--- About ---->
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="./assets/headshot.jpg" alt="Hamze Haashi">
-    </div>
-
-    <div class="about-text">
-      <h3> About Me </h3>
-      <h2>My name is Hamze Haashi. I hold a B.A. in Economics (minor in Finance) from Whitman College and I’m pursuing a career in portfolio and investment analysis.</h2>
-      <p>
-        I served as CFO for a <b>$1.88M</b> student-run investment fund where I built DCFs, led rebalancing frameworks,
-        and presented theses to members and alumni. I’m also developing a backend to assess <b>AAOIFI</b> halal compliance
-        and generate risk insights for public equities. My goal is to align performance with values—delivering clear,
-        data-driven analysis and communication.
-      </p>
-      <hr />
-      <p>
-        <b>Status:</b> Open to roles in investment analysis, asset/portfolio management, and Shariah-compliant finance
-        (January or June 2026 start dates).
-      </p>
-      <hr />
-      <div class="main-btn">
-        <a href="mailto:haashih@whitman.edu" class="btn">📧 Contact Me</a>
+  <main class="container mx-auto px-4">
+    <!-- HERO -->
+    <section class="text-center min-h-screen flex items-center justify-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-orange-50/50 z-0"></div>
+      <div class="max-w-6xl mx-auto px-4 py-32 relative z-10">
+        <div class="max-w-3xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">Hamze Haashi</h1>
+          <h2 class="text-3xl md:text-5xl font-semibold gradient-text mb-6">Finance & Economics Professional</h2>
+          <p class="text-xl text-gray-200 mb-12 max-w-2xl mx-auto">Whitman College | CFO at Whitman Investment Company | Financial Analyst</p>
+          <div class="flex justify-center space-x-6">
+            <a href="#contact" class="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-8 py-4 rounded-full font-medium transition-all duration-500 shadow-lg hover:shadow-xl">Contact Me</a>
+            <a href="#experience" class="border-2 border-primary text-primary hover:bg-primary/5 px-8 py-4 rounded-full font-medium transition-all duration-500 hover:shadow-lg">My Experience</a>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-transparent to-transparent z-10"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!--- Skills ---->
-  <section class="skills" id="skills">
-    <div class="center">
-      <h3> Skills and Focus </h3>
-      <p>Core finance capabilities and tools I use most.</p>
-    </div>
-
-    <div class="service-content">
-      <div class="row">
-        <i class='bx bx-line-chart'></i>
-        <h3>Valuation</h3>
-        <p>DCF, comps, multiples; sensitivity & scenario analysis; investment memos.</p>
-      </div>
-
-      <div class="row">
-        <i class='bx bx-pie-chart'></i>
-        <h3>Portfolio</h3>
-        <p>Rebalancing frameworks, risk notes, cash creation/deployment, reporting.</p>
-      </div>
-
-      <div class="row">
-        <i class='bx bx-spreadsheet'></i>
-        <h3>Technical</h3>
-        <p>Excel (advanced), Google Sheets, PowerPoint; learning Python & FastAPI; basic APIs (Finnhub).</p>
-      </div>
-
-      <div class="row">
-        <i class='bx bx-certification'></i>
-        <h3>Islamic Finance</h3>
-        <p>AAOIFI screening for business activities & financial ratios; halal portfolio alignment.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experiences -->
-  <section class="experiences" id="experiences">
-    <div class="experience-center">
-      <h3> Experience </h3>
-      <p>Highlights from my finance and banking journey.</p>
-    </div>
-
-    <div class="experience-content">
-      <div class="box">
-        <h4>2024–2025</h4>
-        <hr />
-        <table>
-          <tr>
-            <td>
-              <h6>CFO — Whitman Investment Company</h6>
-            </td>
-          </tr>
-        </table>
-        <p>Managed a <b>$1.88M</b> student fund; built 3-statement & DCF models; led rebalancing education and delivered investor-style presentations.</p>
-      </div>
-
-      <div class="box">
-        <h4>Summer 2024</h4>
-        <hr />
-        <table>
-          <tr>
-            <td>
-              <h6>Cash Management & Administration Intern — Baker Boyer Bank</h6>
-            </td>
-          </tr>
-        </table>
-        <p>Processed ACH, wires, and remote deposits; supported internal workflows and client communication.</p>
-      </div>
-
-      <div class="box">
-        <h4>Education</h4>
-        <hr />
-        <table>
-          <tr>
-            <td>
-              <h6>Whitman College — B.A. Economics, Minor in Finance (2025)</h6>
-            </td>
-          </tr>
-        </table>
-        <p>Coursework: Corporate Finance, Investments, Econometrics, Accounting. CFA Level I planned.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="projects" id="projects">
-    <div class="projects-center">
-      <h2> Projects</h2>
-      <p>Selected finance projects and prototypes.</p>
-    </div>
-
-    <div class="projects-content">
-      <div class="portfolio-box">
-        <!-- Optional image: <img class="portfolio-img" src="./assets/project_tgt.png" alt="Target DCF"> -->
-        <div class="projects-overlay">
-          <h2>Target (TGT) — DCF & Sell Recommendation</h2>
-          <p class="project-description">
-            3-statement + DCF with WACC/COE, scenarios & sensitivities; board-style write-up with risks and catalysts.
-          </p>
-          <!-- <a href="#"><i class='bx bx-link-alt'></i></a> -->
+    <!-- ABOUT -->
+    <div class="section-divider"></div>
+    <section id="about" class="py-24">
+      <div class="max-w-6xl mx-auto bg-white/10 rounded-2xl shadow-xl overflow-hidden p-12 card-hover">
+        <h2 class="text-3xl font-bold text-white mb-6">About Me</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="md:col-span-2">
+            <p class="text-gray-200 mb-4">Economics graduate with minors in Finance & Psychology from Whitman College. Passionate about financial analysis, portfolio management, and strategic decision-making.</p>
+            <p class="text-gray-200 mb-4">Currently serving as CFO of Whitman Investment Company managing a $2M portfolio, with experience in valuation modeling, financial reporting, and investment strategy.</p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="bg-blue-100/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">Financial Analysis</span>
+              <span class="bg-green-100/20 text-secondary px-3 py-1 rounded-full text-sm border border-secondary/30">Portfolio Management</span>
+              <span class="bg-blue-100/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">Valuation Modeling</span>
+              <span class="bg-green-100/20 text-secondary px-3 py-1 rounded-full text-sm border border-secondary/30">Excel Expert</span>
+              <span class="bg-blue-100/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">Python/R</span>
+              <span class="bg-green-100/20 text-secondary px-3 py-1 rounded-full text-sm border border-secondary/30">Leadership</span>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=60" alt="Hamze Haashi" class="rounded-lg h-64 w-auto object-cover shadow-md">
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="portfolio-box">
-        <!-- Optional image: <img class="portfolio-img" src="./assets/project_halal.png" alt="Halal Backend"> -->
-        <div class="projects-overlay">
-          <h2>Halal Investment Backend (FastAPI)</h2>
-          <p class="project-description">
-            Prototype API to score <b>AAOIFI</b> compliance and generate risk insights (FastAPI + OpenAI + Finnhub).
-          </p>
-          <!-- <a href="#"><i class='bx bx-link-alt'></i></a> -->
+    <!-- EXPERIENCE -->
+    <div class="section-divider"></div>
+    <section id="experience" class="py-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-white">
+          <span class="gradient-text">Professional Experience</span>
+        </h2>
+        <div class="max-w-4xl mx-auto space-y-12">
+          <div class="bg-white/10 rounded-2xl shadow-lg overflow-hidden card-hover border-l-8 border-primary">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-bold text-white">Chief Financial Officer (CFO)</h3>
+                  <p class="text-gray-300">Whitman Investment Company</p>
+                </div>
+                <span class="bg-blue-100/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">Jan 2024 – Present</span>
+              </div>
+              <div class="mt-4 space-y-2 text-gray-200">
+                <p class="flex items-start"><i data-feather="check" class="mr-2 text-secondary"></i>Directed financial operations for $2M portfolio, aligning investment strategy with endowment guidelines</p>
+                <p class="flex items-start"><i data-feather="check" class="mr-2 text-secondary"></i>Built valuation models and presented 30+ reports to the board and students</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white/10 rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-bold text-white">Portfolio Management Analyst</h3>
+                  <p class="text-gray-300">Whitman Investment Company</p>
+                </div>
+                <span class="bg-blue-100/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">Jan 2023 – Dec 2023</span>
+              </div>
+              <div class="mt-4 space-y-2 text-gray-200">
+                <p class="flex items-start"><i data-feather="check" class="mr-2 text-secondary"></i>Rebalanced 32 equity positions after risk reviews, contributing to +2.4% YoY fund performance</p>
+                <p class="flex items-start"><i data-feather="check" class="mr-2 text-secondary"></i>Oversaw Excel system automating real-time monitoring, eliminating delays in Finance reporting</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white/10 rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-bold text-white">Cash Management Intern</h3>
+                  <p class="text-gray-300">Baker Boyer National Bank</p>
+                </div>
+                <span class="bg-blue-100/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">June 2024 – Aug 2024</span>
+              </div>
+              <div class="mt-4 space-y-2 text-gray-200">
+                <p class="flex items-start"><i data-feather="check" class="mr-2 text-secondary"></i>Supported commercial clients with account services (ACH, wires, RDC) and daily portfolio updates</p>
+                <p class="flex items-start"><i data-feather="check" class="mr-2 text-secondary"></i>Migrated 11+ SharePoint sites; streamlined documentation, cutting retrieval time by 13%</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="portfolio-box">
-        <!-- Optional image: <img class="portfolio-img" src="./assets/project_juba.png" alt="Juba Farms LBO"> -->
-        <div class="projects-overlay">
-          <h2>Juba Farms Buyout — LBO Outline</h2>
-          <p class="project-description">
-            Modeled buyout structure & unit economics; drafted founder outreach and investor pitch outline.
-          </p>
-          <!-- <a href="#"><i class='bx bx-link-alt'></i></a> -->
+    <!-- EDUCATION -->
+    <div class="section-divider"></div>
+    <section id="education" class="py-24">
+      <div class="max-w-6xl mx-auto bg-white/10 rounded-2xl shadow-xl overflow-hidden p-12 card-hover">
+        <h2 class="text-3xl font-bold text-white mb-6">Education</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-bold text-white">Whitman College</h3>
+            <p class="text-gray-200">B.A. Economics (Major), Finance & Psychology (Minors)</p>
+            <p class="text-gray-300">Graduation: Dec 2025 | Full Merit Scholarship</p>
+            <div class="mt-3">
+              <h4 class="font-semibold text-gray-200">Relevant Courses:</h4>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="bg-gray-100/20 text-gray-200 px-3 py-1 rounded-full text-sm border border-gray-300/30">Financial Time Series</span>
+                <span class="bg-gray-100/20 text-gray-200 px-3 py-1 rounded-full text-sm border border-gray-300/30">Corporate Finance</span>
+                <span class="bg-gray-100/20 text-gray-200 px-3 py-1 rounded-full text-sm border border-gray-300/30">Statistics for Economics</span>
+                <span class="bg-gray-100/20 text-gray-200 px-3 py-1 rounded-full text-sm border border-gray-300/30">Intro to Econometrics</span>
+                <span class="bg-gray-100/20 text-gray-200 px-3 py-1 rounded-full text-sm border border-gray-300/30">Intro to Data Science</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contacts -->
-  <section class="contact" id="contact">
-    <div class="contact-center">
-      <h2> Contacts </h2>
-      <p>Hiring for analyst roles in asset/portfolio management or investment research? Reach out.</p>
-      <div class="contacts">
-        <div class="container-left">
-          <p><i class='bx bxs-paper-plane'></i> 📧 <a href="mailto:haashih@whitman.edu">haashih@whitman.edu</a></p>
-          <p><i class='bx bxl-linkedin'></i> 💼 <a href="https://www.linkedin.com/in/hamzehaashi" target="_blank">linkedin.com/in/hamzehaashi</a></p>
-          <p><i class='bx bx-file'></i> 📄 <a href="./assets/resume.pdf" target="_blank">Download Resume (PDF)</a></p>
-          <p><i class='bx bxl-github'></i> 💻 <a href="https://github.com/hamzehaashi" target="_blank">github.com/hamzehaashi</a></p>
+    <!-- SKILLS -->
+    <div class="section-divider"></div>
+    <section id="skills" class="py-24">
+      <h2 class="text-4xl font-bold text-center mb-16 text-white">
+        <span class="gradient-text">Skills & Certifications</span>
+      </h2>
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-4">
+        <div class="bg-white/10 p-8 rounded-2xl shadow-lg card-hover">
+          <h3 class="text-xl font-bold text-white mb-4">Financial Skills</h3>
+          <ul class="space-y-2 text-gray-200">
+            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-secondary"></i>Financial statement analysis</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-secondary"></i>Discounted Cash Flow (DCF)</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-secondary"></i>Leveraged Buyout (LBO)</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-secondary"></i>Portfolio rebalancing</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-secondary"></i>10-K/MD&A analysis</li>
+          </ul>
         </div>
-
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/hamzehaashi" target="_blank"><i class='bx bxl-linkedin'></i></a>
-          <a href="https://github.com/hamzehaashi" target="_blank"><i class='bx bxl-github'></i></a>
-        </div>
-
-        <div class="copyright">
-          <p>© 2025 Hamze Haashi — All rights reserved.</p>
+        <div class="bg-white/10 p-6 rounded-xl shadow-md card-hover">
+          <h3 class="text-xl font-bold text-white mb-4">Technical Skills</h3>
+          <ul class="space-y-2 text-gray-200">
+            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-secondary"></i>Excel (XLOOKUP, Pivot, basic VBA)</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-secondary"></i>Python Pandas</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-secondary"></i>R Studio</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-secondary"></i>PowerPoint</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-secondary"></i>CRM Systems</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!--- Link to js---->
-  <script type="text/javascript" src="static.js"></script>
+    <!-- CONTACT -->
+    <div class="section-divider"></div>
+    <section id="contact" class="py-24">
+      <div class="max-w-6xl mx-auto bg-white/10 rounded-2xl shadow-xl overflow-hidden p-12 card-hover">
+        <h2 class="text-3xl font-bold text-white mb-6">Get In Touch</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Contact Information</h3>
+            <div class="space-y-4 text-gray-200">
+              <div class="flex items-start"><i data-feather="mail" class="mr-3 text-secondary"></i><span>haashih@whitman.edu</span></div>
+              <div class="flex items-start"><i data-feather="phone" class="mr-3 text-secondary"></i><span>(509)-516-6427</span></div>
+              <div class="flex items-start"><i data-feather="linkedin" class="mr-3 text-secondary"></i><span>LinkedIn Profile</span></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Send Me a Message</h3>
+            <form class="space-y-4">
+              <div><label class="block text-gray-200 mb-1">Name</label><input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white/10 border-white/20 text-white"></div>
+              <div><label class="block text-gray-200 mb-1">Email</label><input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white/10 border-white/20 text-white"></div>
+              <div><label class="block text-gray-200 mb-1">Message</label><textarea rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white/10 border-white/20 text-white"></textarea></div>
+              <button type="submit" class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition w-full">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <custom-footer></custom-footer>
+
+  <!-- scripts -->
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="script.js"></script>
+  <script>feather.replace();</script>
+
+  <!-- global tweaks -->
+  <script>
+    /* same-tab links */
+    document.querySelectorAll('a').forEach(a=>a.removeAttribute('target'));
+
+    /* scroll-zoom background */
+    const zoomBg=document.getElementById('zoom-bg');
+    let lastScroll=window.scrollY;
+    const zoomFactor=0.0003;
+    function updateZoom(){
+      const scroll=window.scrollY;
+      const delta=scroll-lastScroll;
+      lastScroll=scroll;
+      const current=zoomBg.style.transform?parseFloat(zoomBg.style.transform.match(/scale\(([\d.]+)\)/)?.[1]||1):1;
+      const next=Math.max(1,Math.min(1.8,current+delta*zoomFactor));
+      zoomBg.style.transform=`scale(${next})`;
+    }
+    window.addEventListener('scroll',updateZoom,{passive:true});
+
+    /* separator fade-ins */
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+    },{threshold:.25});
+    document.querySelectorAll('.section-divider').forEach(el=>io.observe(el));
+  </script>
 </body>
-
 </html>
