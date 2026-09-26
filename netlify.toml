@@ -1,0 +1,16 @@
+[build]
+  command = "node build.mjs"
+  publish = "dist"
+
+[dev]
+  framework = "#static"
+  publish = "."
+  port = 8888
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
